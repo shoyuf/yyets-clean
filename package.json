@@ -1,15 +1,27 @@
 {
-  "name": "zimuzu",
-  "version": "0.1.0",
+  "name": "yyets-clean",
+  "author": "Shoyuf <shoyuf@shoyuf.top> (https://shoyuf.top)",
+  "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "8.11.x"
+  },
+  "bugs": {
+    "url": "https://github.com/shoyuf/yyets-clean/issues",
+    "email": "shoyuf@shoyuf.top"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "build:electron": "vue-cli-service build:electron",
+    "serve:electron": "vue-cli-service serve:electron"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.6",
     "vue": "^2.5.17"
   },
   "devDependencies": {
@@ -20,6 +32,10 @@
     "@vue/eslint-config-airbnb": "^3.0.1",
     "@vue/test-utils": "^1.0.0-beta.20",
     "chai": "^4.1.2",
+    "electron": "^2.0.7",
+    "electron-builder": "^20.28.1",
+    "electron-devtools-installer": "^2.2.4",
+    "vue-cli-plugin-electron-builder": "^1.0.0-beta.8",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -31,7 +47,9 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "max-len": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
@@ -42,8 +60,36 @@
     }
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "chrome 61"
+  ],
+  "main": "dist_electron/bundled/background.js",
+  "build": {
+    "productName": "yyets-clean",
+    "appId": "com.zimuzu.electron"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }
+    ]
+  },
+  "mac": {
+    "icon": "build/icon.icns"
+  },
+  "win": {
+    "icon": "build/icon.ico"
+  },
+  "linux": {
+    "icon": "build"
+  },
+  "license": "MIT"
 }

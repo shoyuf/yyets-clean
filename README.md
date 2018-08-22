@@ -1,31 +1,47 @@
-# zimuzu
+[![YYETS-CLEAN](./logo.png)](https://wendux.github.io/dist/#/doc/flyio/readme)
+( **Not Official** )
 
-## Project setup
-```
-yarn install
-```
+<!-- [![build status](https://travis-ci.org/)](https://travis-ci.org/) -->
+<!-- [![coverage]()]() -->
+<!-- [![size](https://img.shields.io/github/size/)]() -->
+![platform](https://img.shields.io/badge/platform-Windows-blue.svg)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## YYETS-CLEAN
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+一个基于人人影视客户端 API 的 Electron 客户端，可实现点播和下载美剧电影等功能。
 
-### Lints and fixes files
-```
-yarn run lint
-```
+### 平台支持
 
-### Run your unit tests
-```
-yarn run test:unit
-```
+| Windows | Mac OS | Linux | Browser | 
+| - | - | - | - |
+| ✔ | ✍ | ✍ | ✍ |
 
-### Run your end-to-end tests
-```
-yarn run test:e2e
-```
+### 功能完整程度
+
+- [x] 基础观看功能
+- [ ] 迅雷批量下载
+- [ ] 移动端界面优化
+- [ ] 单元测试
+- [ ] 各类 Scheme 打开方式
+- [ ] 自动更新
+
+### 使用
+
+下载对应平台的 release 版本
+
+### 打包
+
+`Node.js` 版本大于 `8.11.x` ，建议使用 `Yarn`
+
+执行 `build:electron`
+
+### 鸣谢
+
+1. [Vue.js](https://vuejs.org/)
+2. [Electron](https://electronjs.org/)
+3. [Element](https://element.eleme.io/)
+4. [electron-builder](https://www.electron.build/)
+4. [Vue CLI 3](https://cli.vuejs.org/)
+5. [Vue CLI Plugin Electron Builder](https://nklayman.github.io/vue-cli-plugin-electron-builder)
+5. [axios](https://github.com/axios/axios)
+5. [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)
