@@ -37,11 +37,15 @@
 
 ### 鸣谢
 
-1. [Vue.js](https://vuejs.org/)
-2. [Electron](https://electronjs.org/)
-3. [Element](https://element.eleme.io/)
-4. [electron-builder](https://www.electron.build/)
-4. [Vue CLI 3](https://cli.vuejs.org/)
-5. [Vue CLI Plugin Electron Builder](https://nklayman.github.io/vue-cli-plugin-electron-builder)
-5. [axios](https://github.com/axios/axios)
-5. [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)
+- [Vue.js](https://vuejs.org/)
+- [Electron](https://electronjs.org/)
+- [Element](https://element.eleme.io/)
+- [electron-builder](https://www.electron.build/)
+- [Vue CLI 3](https://cli.vuejs.org/)
+- [Vue CLI Plugin Electron Builder](https://nklayman.github.io/vue-cli-plugin-electron-builder)
+- [axios](https://github.com/axios/axios)
+- [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)
+
+### License
+
+MIT
