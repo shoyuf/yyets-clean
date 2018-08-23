@@ -117,7 +117,9 @@
     <div id="two" v-if="itemDeatil.detail.poster !== ''">
       <ul class="list">
         <div class="flex-center"><img :src="itemDeatil.detail.poster" alt="" width="200" style="min-height:266px;"></div>
-        <p v-if="itemDeatil.detail.id">影片地址: <a :href="`http://www.zimuzu.io/resource/${itemDeatil.detail.id}`" target="_blank">链接</a></p>
+        <p v-if="itemDeatil.detail.id">影片地址:
+          <a href="javascript:void(0)" @click="hrefTo(`http://www.zimuzu.io/resource/${itemDeatil.detail.id}`)">链接</a>
+        </p>
         <p v-if="itemDeatil.detail.cnname">中文名: {{itemDeatil.detail.cnname}}</p>
         <p v-if="itemDeatil.detail.enname">英文名: {{itemDeatil.detail.enname}}</p>
         <p v-if="itemDeatil.detail.channel_cn">频道: {{itemDeatil.detail.channel_cn}}</p>
@@ -150,11 +152,13 @@
 </template>
 
 <script>
+const { shell } = require('electron');
+
 export default {
   name: 'workspace',
   data() {
     return {
-      searchKey: '',
+      searchKey: process.env.NODE_ENV === 'development' ? '大爆炸' : '',
       searchResults: [],
       itemDeatil: { detail: { poster: '' } },
       detailInfo: '',
@@ -189,7 +193,7 @@ export default {
       else this.seasonList = 'null';
     },
     hrefTo(url) {
-      window.open(url);
+      shell.openExternal(url);
     },
   },
   mounted() {},
