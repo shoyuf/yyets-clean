@@ -123,7 +123,7 @@
       <el-menu-item index="2">资源详情</el-menu-item>
       <el-menu-item index="3">剧集列表</el-menu-item>
     </el-menu>
-    <div id="one" v-show="activeIndex === '1'">
+    <div id="one" v-show="innerWidth > 1024 || activeIndex === '1'">
       <div class="row">
         <el-input v-model="searchKey" placeholder="search content" size="small" @keyup.enter.native="search"></el-input>
         <el-button @click="search" size="small" style="margin-left:10px;">搜索</el-button>
@@ -135,7 +135,7 @@
         </li>
       </ul>
     </div>
-    <div id="two" v-show="activeIndex === '2'" v-if="itemDeatil.detail.poster !== ''">
+    <div id="two" v-show="innerWidth > 1024 || activeIndex === '2'" v-if="itemDeatil.detail.poster !== ''">
       <ul class="list">
         <div class="flex-center"><img :src="itemDeatil.detail.poster" alt="" width="200" style="min-height:266px;"></div>
         <p v-if="itemDeatil.detail.id">影片地址:
@@ -154,7 +154,7 @@
         <el-button v-for="item in itemDeatil.search_list" :key="item.webname" @click="hrefTo(item.address)" type="default" size="mini" style="margin:0 4px 4px 0;">{{item.webname}}</el-button>
       </ul>
     </div>
-    <div id="three" v-show="activeIndex === '3'" v-if="seasonList">
+    <div id="three" v-show="innerWidth > 1024 || activeIndex === '3'" v-if="seasonList">
       <p v-if="seasonList === 'null'">没有相关资源</p>
       <ul class="list" v-else>
         <el-button @click="thunderLinks" type="default" size="mini" style="margin-bottom:10px;">批量下载该列表（迅雷）</el-button>
@@ -200,7 +200,9 @@ export default {
   },
   methods: {
     handleSelect(e) {
-      this.activeIndex = e;
+      if (this.innerWidth < 1024) {
+        this.activeIndex = e;
+      }
     },
     async search() {
       if (this.searchKey === '') {
