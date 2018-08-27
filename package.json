@@ -1,7 +1,7 @@
 {
   "name": "yyets-clean",
   "author": "Shoyuf <shoyuf@shoyuf.top> (https://shoyuf.top)",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "engines": {
     "node": "8.11.x"
@@ -22,6 +22,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.6",
+    "qs": "^6.5.2",
     "vue": "^2.5.17"
   },
   "devDependencies": {
