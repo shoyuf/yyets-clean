@@ -45,7 +45,7 @@
           <el-tooltip content="本应用承诺不会收集您的账号密码，请放心使用。" placement="top" slot="label">
             <span>密码<i class="el-icon-question"></i></span>
           </el-tooltip>
-          <el-input v-model="form.password" type="password"></el-input>
+          <el-input v-model="form.password" type="password" @keyup.enter.native="onLogin"></el-input>
         </el-form-item>
         <el-form-item style="text-align:center;">
           <el-button type="primary" @click="onLogin" :loading="loading">登录</el-button>
@@ -85,7 +85,13 @@ export default {
       this.$refs.form.validate(async (valid) => {
         if (valid) {
           this.loading = true;
-          const res = await this.$http.get(`/index.php?g=api/pv2&m=index&a=login&accesskey=519f9cab85c8059d17544947k361a827&account=${this.form.username}&password=${this.form.password}`);
+          const res = await this.$http.get('/index.php', {
+            params: {
+              a: 'login',
+              account: this.form.username,
+              password: this.form.password,
+            },
+          });
           this.loading = false;
           if (res.data.status === 1) {
             this.$message({
