@@ -1,4 +1,4 @@
-[![YYETS-CLEAN](./logo.png)](https://wendux.github.io/dist/#/doc/flyio/readme)
+[![YYETS-CLEAN](./logo.png)](https://github.com/shoyuf/yyets-clean)
 ( **Not Official** )
 
 <!-- [![build status](https://travis-ci.org/)](https://travis-ci.org/) -->
