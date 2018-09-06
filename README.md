@@ -29,6 +29,12 @@
 - [ ] 单元测试
 - [ ] api没有token自动失效机制
 
+### 界面
+
+![screenshot_desktop](./screenshot_desktop.png)
+<img src="./screenshot_mobile.png" width="400"/>
+<!-- ![screenshot_mobile](./screenshot_mobile.png) -->
+
 ### 使用
 
 下载对应平台的 release 版本
@@ -37,7 +43,7 @@
 
 `Node.js` 版本大于 `8.11.x` ，建议使用 `Yarn`
 
-执行 `build:electron`
+执行 `yarn build:electron`
 
 ### 鸣谢
 
