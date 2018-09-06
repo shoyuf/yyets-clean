@@ -101,9 +101,9 @@ export default {
             window.localStorage.setItem('userInfo', JSON.stringify(res.data.data));
             this.$emit('close', res.data.data);
           }
-        } else {
-          return false;
+          return true;
         }
+        return false;
       });
     },
   },

@@ -385,6 +385,7 @@ export default {
       const arr = [];
       this.activeSeason.episodes.forEach((el) => {
         let type;
+        // eslint-disable-next-line
         for (const c in el.files) {
           if (c !== 'APP') {
             type = c;
