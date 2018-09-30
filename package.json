@@ -1,10 +1,11 @@
 {
   "name": "yyets-clean",
+  "description": "A electron client based on YYETS API",
   "author": "Shoyuf <shoyuf@shoyuf.top> (https://shoyuf.top)",
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "8.11.x"
+    "node": "8.x.x"
   },
   "bugs": {
     "url": "https://github.com/shoyuf/yyets-clean/issues",
