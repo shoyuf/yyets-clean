@@ -2923,7 +2923,7 @@ elegant-spinner@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
 
-element-ui@^2.4.6:
+element-ui@^2.4.7:
   version "2.4.7"
   resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.4.7.tgz#073b404222815c08ba2e68b39ec8e6ff7b7b13e0"
   dependencies:
@@ -9120,6 +9120,10 @@ vue-cli-plugin-electron-builder@^1.0.0-beta.8:
     webpack "^4.16.5"
     webpack-chain "^4.9.0"
     webpack-target-electron-renderer "^0.4.0"
+
+vue-cli-plugin-element@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-element/-/vue-cli-plugin-element-1.0.0.tgz#2ee8cfecb9a49aabdc1d4cb58934113bddf3b4c0"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"

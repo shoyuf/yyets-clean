@@ -95,6 +95,7 @@
 /** next **/
 .el-header {
   display: flex;
+  padding:0 !important;
 }
 .el-header .el-icon-menu {
   height: 60px;

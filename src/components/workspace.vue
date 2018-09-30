@@ -4,9 +4,9 @@
 <template>
   <div id="app">
     <el-container direction="vertical">
-      <el-header class="el-header">
+      <el-header class="el-header" height="61px">
         <div class="el-icon-menu" @mouseover="showHideBar = true"></div>
-        <h1 v-if="innerWidth > 1024" style="background-color:#545c64;line-height:60px;color:#fff;">YYeTs-clean</h1>
+        <h1 v-if="innerWidth > 1024" style="background-color:#545c64;height:60px;line-height:60px;color:#fff;">YYeTs-clean</h1>
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#f34f4f" id="menu">
           <el-menu-item index="1" v-if="innerWidth < 1024">搜索</el-menu-item>
           <el-menu-item index="2" v-if="innerWidth < 1024">资源详情</el-menu-item>

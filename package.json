@@ -1,28 +1,21 @@
 {
   "name": "yyets-clean",
-  "description": "A electron client based on YYETS API",
-  "author": "Shoyuf <shoyuf@shoyuf.top> (https://shoyuf.top)",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "8.x.x"
-  },
-  "bugs": {
-    "url": "https://github.com/shoyuf/yyets-clean/issues",
-    "email": "shoyuf@shoyuf.top"
-  },
+  "description": "A electron client based on YYETS API",
+  "author": "Shoyuf <shoyuf@shoyuf.top> (https://shoyuf.top)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
     "build:electron": "vue-cli-service build:electron",
-    "serve:electron": "vue-cli-service serve:electron"
+    "serve:electron": "vue-cli-service serve:electron",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "element-ui": "^2.4.6",
+    "element-ui": "^2.4.7",
     "qs": "^6.5.2",
     "vue": "^2.5.17"
   },
@@ -38,6 +31,7 @@
     "electron-builder": "^20.28.1",
     "electron-devtools-installer": "^2.2.4",
     "vue-cli-plugin-electron-builder": "^1.0.0-beta.8",
+    "vue-cli-plugin-element": "^1.0.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -64,7 +58,10 @@
   "browserslist": [
     "chrome 61"
   ],
-  "main": "dist_electron/bundled/background.js",
+  "bugs": {
+    "url": "https://github.com/shoyuf/yyets-clean/issues",
+    "email": "shoyuf@shoyuf.top"
+  },
   "build": {
     "productName": "yyets-clean",
     "appId": "com.zimuzu.electron"
@@ -84,14 +81,18 @@
       }
     ]
   },
-  "mac": {
-    "icon": "build/icon.icns"
+  "engines": {
+    "node": "8"
   },
-  "win": {
-    "icon": "build/icon.ico"
-  },
+  "license": "MIT",
   "linux": {
     "icon": "build"
   },
-  "license": "MIT"
+  "mac": {
+    "icon": "build/icon.icns"
+  },
+  "main": "dist_electron/bundled/background.js",
+  "win": {
+    "icon": "build/icon.ico"
+  }
 }

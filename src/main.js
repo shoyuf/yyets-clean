@@ -1,26 +1,30 @@
 import Vue from 'vue';
 import axios from 'axios';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
+import './plugins/element';
 
 let shell;
+let isElectron;
 if (window.navigator.userAgent.indexOf('Electron') !== -1) {
+  isElectron = true;
+}
+if (isElectron) {
   // eslint-disable-next-line
   shell = require('electron').shell;
 }
 
-Vue.use(ElementUI);
-if (process.env.NODE_ENV === 'production') {
-  axios.defaults.baseURL = 'http://pc.zmzapi.com';
+if (isElectron) {
+  axios.defaults.baseURL = 'htt p://pc.zmzapi.com';
 } else {
   axios.defaults.baseURL = '/';
 }
+
 const axiosInstance = axios.create({
   params: {
     g: 'api/pv2', accesskey: '519f9cab85c8059d17544947k361a827',
   },
 });
+
 axiosInstance.interceptors.request.use((req) => {
   if (window.localStorage.getItem('userInfo')) {
     const userInfo = JSON.parse(window.localStorage.getItem('userInfo'));
@@ -40,8 +44,9 @@ axiosInstance.interceptors.response.use((rep) => {
 }, err => Promise.reject(err));
 
 Vue.prototype.$http = axiosInstance;
+
 Vue.prototype.$openUrl = function openUrl(url) {
-  if (window.navigator.userAgent.indexOf('Electron') !== -1) {
+  if (isElectron) {
     shell.openExternal(url);
   } else {
     window.open(url);
