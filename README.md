@@ -14,7 +14,7 @@
 
 | Windows | Mac OS | Linux | Browser | 
 | - | - | - | - |
-| ✔ | ✍ | ✍ | ✍ |
+| ✔ | ✔ | ✍ | ✔ |
 
 ### 功能完整程度
 
@@ -23,23 +23,26 @@
 - [x] 登录功能，登陆等级高的账号后能观看更多剧集
 - [x] 移动端界面优化
 - [x] 迅雷批量下载
-- [ ] 浏览器端支持
-- [ ] Mac OS, Linux 客户端
+- [x] 浏览器端支持
+- [x] Mac OS
+- [ ] Linux 客户端
 - [ ] 自动更新
 - [ ] 单元测试
 - [ ] api没有token自动失效机制
 
 ### 界面
 
-![screenshot_desktop](./screenshot_desktop.png)
+![screenshot_desktop](./screenshot_desktop.jpg)
+
 <img src="./screenshot_mobile.png" width="400"/>
-<!-- ![screenshot_mobile](./screenshot_mobile.png) -->
 
 ### 使用
 
-下载对应平台的 release 版本
+1. 下载对应平台的 [release](https://github.com/shoyuf/yyets-clean/releases) 版本
 
-### 打包
+2. 前往 [http://yyets.shoyuf.top](http://yyets.shoyuf.top) 使用在线版本 **不推荐，可能服务存在不稳定性**
+
+### 构建
 
 `Node.js` 版本大于 `8.11.x` ，建议使用 `Yarn`
 
