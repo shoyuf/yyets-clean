@@ -16,20 +16,8 @@
 | - | - | - | - |
 | ✔ | ✔ | ✍ | ✔ |
 
-### 功能完整程度
-
-- [x] 基础观看功能
-- [x] 各类 Scheme 打开方式
-- [x] 登录功能，登陆等级高的账号后能观看更多剧集
-- [x] 移动端界面优化
-- [x] 迅雷批量下载
-- [x] 浏览器端支持
-- [x] Mac OS
-- [ ] 收藏功能
-- [ ] Linux 客户端
-- [ ] 自动更新
-- [ ] 单元测试
-- [ ] api没有token自动失效机制
+### 项目功能开发进度
+[Teambition](https://www.teambition.com/project/5bdfab00671fc20018c5d4da/tasks/scrum/5bdfab004e445300181dbc36)
 
 ### 界面
 
