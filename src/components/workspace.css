@@ -25,7 +25,7 @@
   border: 1px solid #f34f4f;
   padding: 0 2px;
   color: #f34f4f;
-  border-radius: 2px;
+  border-radius: 4px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@
   margin-bottom: 10px;
   position: relative;
   box-shadow: 2px 2px 4px 1px rgba(178, 178, 178, 1);
-  padding: 6px 12px 4px;
+  padding: 15px;
 }
 .spisode-number {
   white-space: nowrap;
@@ -63,7 +63,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  color: #f34f4f;
+  color: rgba(243, 79, 79, 0.5);
 }
 .source-item {
   color: #909399;
