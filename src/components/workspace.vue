@@ -108,15 +108,16 @@
                   <el-button-group v-for="it in ite"
                     :key="it.address"
                     style="margin:0 4px 4px 0;">
-                    <el-button @click="$openUrl(it.address)"
+                    <el-button @click="$openUrl(it.address || it.name)"
                       type="default"
-                      size="mini">{{it.way_name}}
+                      size="mini">
+                      {{it.name.includes('yyets:') ? 'YYETS下载器' : it.way_name}}
                       <span v-if="it.size && it.size !== '0'">({{it.size}})</span> &nbsp;</el-button>
                     <el-button @click="thunderLink(it)"
                       class="thunder-button"
                       type="default"
                       size="mini"
-                      v-if="it.address.indexOf('ed2k:') === 0||it.address.indexOf('magnet:') === 0">
+                      v-if="it.address && (it.address.indexOf('ed2k:') === 0||it.address.indexOf('magnet:') === 0)">
                       <svg t="1535099216220"
                         class="icon"
                         style=""
