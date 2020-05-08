@@ -9,30 +9,25 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:electron": "vue-cli-service build:electron",
-    "serve:electron": "vue-cli-service serve:electron",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "serve:electron": "vue-cli-service serve:electron"
   },
   "dependencies": {
+    "@vue/cli-service": "^3.0.0",
     "axios": "^0.18.0",
     "element-ui": "^2.4.7",
     "qs": "^6.5.2",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-template-compiler": "^2.5.17"
   },
   "devDependencies": {
-    "@vue/cli-plugin-e2e-cypress": "^3.0.0",
     "@vue/cli-plugin-eslint": "^3.0.0",
-    "@vue/cli-plugin-unit-mocha": "^3.0.0",
-    "@vue/cli-service": "^3.0.0",
     "@vue/eslint-config-airbnb": "^3.0.1",
-    "@vue/test-utils": "^1.0.0-beta.20",
     "chai": "^4.1.2",
     "electron": "^2.0.7",
     "electron-builder": "^20.28.1",
     "electron-devtools-installer": "^2.2.4",
-    "vue-cli-plugin-electron-builder": "^1.0.0-beta.8",
-    "vue-cli-plugin-element": "^1.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-cli-plugin-electron-builder": "^1.4.6"
   },
   "eslintConfig": {
     "root": true,
